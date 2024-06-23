@@ -1,27 +1,65 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Dancing Script", cursive;
 }
-body{
+
+body {
     background-color: #EEEEEE;
 }
-nav h1{
-font-size: 40px;
+
+nav h1 {
+    font-size: 40px;
 }
-header nav{
+
+header nav {
     padding: 5px;
     width: 100vw;
     height: 10vh;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     background-color: #686D76;
-    
+    z-index: 1;
+
 }
-section h2{
+header nav form{
     display: flex;
     justify-content: center;
-    font-size: 38px;
+}
+.searchbox{
+    flex-grow: 1;
+    margin-right: 10px;
+    
+}
+.searchbox,.btn{
+    border: none;
+    font-size:18px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn{
+    transition:background-color 0.5s ease-out;
+}
+.btn:hover{
+    background-color: #a3c4f0;
+}
+
+.Recipe-container {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 5px;
+}
+/*responsive code*/
+@media screen and (max-width:700px) {
+    header nav {
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+    }
+    
 }
