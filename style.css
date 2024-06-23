@@ -42,17 +42,45 @@ header nav form{
 }
 .btn{
     transition:background-color 0.5s ease-out;
+    margin-right: 20px;
 }
-.btn:hover{
+.btn:hover,.recipe button:hover{
     background-color: #a3c4f0;
 }
 
 .Recipe-container {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-size: 35px;
-    margin-top: 5px;
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    margin: 10px auto;
+    width: 85%;
+    padding: 10px;
+    grid-gap: 10px;
+    place-items: center;
 }
+.recipe{
+    background-color:#a3c4f0;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1) rgba(34, 34, 34, 0.5);
+    max-width: 350px;
+}
+.recipe img{
+    height:300px ;
+}
+
+.recipe button{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
 /*responsive code*/
 @media screen and (max-width:700px) {
     header nav {
