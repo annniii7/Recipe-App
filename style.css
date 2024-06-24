@@ -44,7 +44,7 @@ header nav form{
     transition:background-color 0.5s ease-out;
     margin-right: 20px;
 }
-.btn:hover,.recipe button:hover{
+.btn:hover,.recipe button:hover,.recipe-closebtn:hover{
     background-color: #a3c4f0;
 }
 
@@ -68,6 +68,10 @@ header nav form{
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1) rgba(34, 34, 34, 0.5);
     max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+.recipe:hover{
+    transform:scale(1.12);
 }
 .recipe img{
     height:300px ;
@@ -80,6 +84,79 @@ header nav form{
     cursor: pointer;
     
 }
+/*recipe details*/
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%) ;
+    background-color:#84abe2 ;
+    border-radius: 12px;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+
+}
+.recipe-details-content{
+    padding: 20px;
+}
+.recipe-details-content ul{
+    list-style: none;
+    padding: 10px;
+}
+.recipename{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+}
+.ingredientList{
+    margin-bottom: 10px;
+    margin-left: 2px;
+}
+.recipeInstructions p{
+    line-height: 30px;
+    white-space:pre-line;
+}
+.recipe-closebtn{
+    border: none;
+    font-size:18px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    
+}
+
+
+/*ADDING Scroll bar to recipe details pop-up*/
+.recipe-details::-webkit-scrollbar{
+    width: 15px;
+}
+.recipe-details::-webkit-scrollbar-thumb{
+    background:#686D76;
+    border-radius: 16px;
+    --webkit-border-radius:16px;
+}
+body::-webkit-scrollbar{
+    width: 20px;
+}
+body::-webkit-scrollbar-thumb{
+    background:#ebecee;
+   
+}
+body::-webkit-scrollbar-track{
+    background: #d1daea;
+}
+
+
+
 
 /*responsive code*/
 @media screen and (max-width:700px) {
